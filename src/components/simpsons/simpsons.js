@@ -1,14 +1,13 @@
-import React from 'react';
 import Simpson from "./simpson";
-const Simpsons = ({items: simpsons}) => {
+const Simpsons = ({item: simpson}) => {
     return (
-        <div>
+        <>
             {
-                simpsons.map((value, index) => <Simpson user={value} key={index}></Simpson>)
+                simpson.map((value, index) => <Simpson user={value} key={index}></Simpson>)
             }
 
-        </div>
+        </>
     );
-};
+}
 
 export default Simpsons;

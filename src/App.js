@@ -40,9 +40,9 @@ let simpsons = [
 ];
 function App() {
   return (
-    <div>
-        <Simpsons items={simpsons}></Simpsons>
-    </div>
+    <>
+        <Simpsons item={simpsons}></Simpsons>
+    </>
   );
 }
 

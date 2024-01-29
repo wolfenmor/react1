@@ -1,7 +1,7 @@
 import React from 'react';
 import Character from "./character";
 
-const Characters = ({item: characters}) => {
+const Characters = ({items: characters}) => {
     return (
         <div id={"characters"}>
             {

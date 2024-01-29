@@ -1,3 +1,4 @@
+import React, {useState, useEffect} from 'react';
 import "./App.css"
 import Simpsons from "./components/simpsons/simpsons";
 import Characters from "./components/RickAndMorty/characters";
@@ -40,14 +41,19 @@ let simpsons = [
     },
 ];
 function App() {
+    const [rickAndMortyData, setRickAndMortyData] = useState([]);
+
+    useEffect(() => {
+        fetch('https://rickandmortyapi.com/api/character')
+            .then(response => response.json())
+            .then(data => setRickAndMortyData(data.results))
+            .catch(error => console.error('Ошибка загрузки данных:', error));
+    });
   return (
     <>
         <Simpsons item={simpsons}></Simpsons>
-        {
-            fetch('https://rickandmortyapi.com/api/character')
-                  .then(response => response.json())
-                  .then(json => <Characters item={json.toString()}></Characters>)
-        }
+
+        <Characters items={rickAndMortyData}></Characters>
     </>
   );
 }

@@ -4,7 +4,7 @@ const Character = ({character}) => {
     return (
         <>
           <div id={"character"}>
-              {character.id} {character.name}
+              <h2>{character.name}</h2>
           </div>
 
         </>

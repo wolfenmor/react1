@@ -1,5 +1,6 @@
 import "./App.css"
 import Simpsons from "./components/simpsons/simpsons";
+import Characters from "./components/RickAndMorty/characters";
 // отдавать
 let simpsons = [
     {
@@ -42,6 +43,11 @@ function App() {
   return (
     <>
         <Simpsons item={simpsons}></Simpsons>
+        {
+            fetch('https://rickandmortyapi.com/api/character')
+                  .then(response => response.json())
+                  .then(json => <Characters item={json.toString()}></Characters>)
+        }
     </>
   );
 }

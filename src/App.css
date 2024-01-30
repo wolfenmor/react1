@@ -13,8 +13,39 @@
 img{
     display: flex;
     height: 150px;
-    padding-top:20px ;
+    padding-top:20px;
 }
 #box:nth-child(4){
     height: 400px;
+}
+#characters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(39, 43, 51);
+}
+#container-character{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(60, 62, 68);
+    margin: 20px;
+    border-radius: 3%;
+}
+#characterCard{
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    margin-left: 10px;
+}
+#characterCard p{
+    margin: 0 0 5px 0;
+}
+#container-character img{
+    padding: 0;
+}
+#container-character h2{
+    margin-top: 5px;
 }

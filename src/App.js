@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import "./App.css"
 import Simpsons from "./components/simpsons/simpsons";
-import Characters from "./components/RickAndMorty/characters";
-// отдавать
+import Characters from "./components/RickAndMorty/characters"; // отдавать
 let simpsons = [
     {
         name: 'Bart',
@@ -46,8 +45,8 @@ function App() {
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/character')
             .then(response => response.json())
-            .then(data => setRickAndMortyData(data.results))
-            .catch(error => console.error('Ошибка загрузки данных:', error));
+            .then(data => setRickAndMortyData(data.results.slice(0,6)))
+            .catch(error => console.error(error));
     });
   return (
     <>

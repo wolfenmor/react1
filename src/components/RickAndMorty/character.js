@@ -8,7 +8,7 @@ const Character = ({character}) => {
                     <img src={character.image} alt={"character_image"}/>
                 </div>
                 <div id={"characterCard"}>
-                <h2>{character.id} {character.name}</h2>
+                <h3>{character.id} {character.name}</h3>
                 <p>{character.status} - <b>{character.species}</b></p>
                 <p> gender: {character.gender}</p>
             </div>

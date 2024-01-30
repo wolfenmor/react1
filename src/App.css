@@ -49,3 +49,6 @@ img{
 #container-character h2{
     margin-top: 5px;
 }
+#character_image{
+    border-radius: 50%;
+}

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import "./App.css"
-import Simpsons from "./components/simpsons/simpsons";
-import Characters from "./components/RickAndMorty/characters"; // отдавать
+import Simpsons from "./components/Simpsons/Simpsons";
+import Characters from "./components/RickAndMorty/Characters"; // отдавать
 let simpsons = [
     {
         name: 'Bart',

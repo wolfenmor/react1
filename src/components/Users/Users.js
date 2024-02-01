@@ -1,4 +1,4 @@
-import User from "./user";
+import User from "./User";
 function Users({item: user}) {
     return (
       <div>

@@ -1,4 +1,4 @@
-import Simpson from "./simpson";
+import Simpson from "./Simpson";
 const Simpsons = ({item: simpson}) => {
     return (
         <div id={"simpsons-container"}>

@@ -1,6 +1,7 @@
 import React from 'react';
 const Post = ({item: post, btn}) => {
     return (
+
         <div id={"post"}>
             {post.id} {post.title}
             <button onClick={() =>{

@@ -9,7 +9,7 @@ const Posts = () => {
         getAll().then(value => setPosts(value.data))
     }, [])
     return (
-        <div>
+        <div id={"posts"}>
 
             {
              posts.map(value => <Post item={value} key={value.id}></Post>)

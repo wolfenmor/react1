@@ -3,7 +3,7 @@ function Users({item: user}) {
     return (
       <div>
           {
-              user.map((value, index) => <User user={value} key={index}></User>)
+              user.map((value) => <User user={value} key={value.id}></User>)
           }
       </div>
     );

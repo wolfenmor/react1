@@ -1,6 +1,5 @@
 import "./App.css"
 import {useEffect, useState} from "react";
-import SpaceX from "./components/SpaceXs/SpaceX";
 import SpaceXs from "./components/SpaceXs/SpaceXs";
 import {getSpaceXs} from "./components/services/Services.api";
 
@@ -19,4 +18,4 @@ function App() {
     </>
   );
 }
-export default App; // брать
+export default App;

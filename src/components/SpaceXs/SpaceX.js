@@ -2,9 +2,10 @@ import React from 'react';
 const SpaceX = ({value}) => {
         return (
             <div>
-                {value.mission_name} {value.launch_year} <img src={value.links.mission_patch_small} alt={value.mission_name}/>{
-
-            }
+                <h2>{value.mission_name}</h2>
+                <p><b>{value.launch_year}</b></p>
+                <img src={value.links.mission_patch_small} alt={value.mission_name}/>
+                <hr/>
             </div>
         );
 };

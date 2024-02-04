@@ -1,3 +1,6 @@
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-      .then(json => console.log(json))
+const getSpaceXs = () => {
+   return  fetch('https://api.spacexdata.com/v3/launches')
+        .then(response => response.json())
+}
+
+export {getSpaceXs}

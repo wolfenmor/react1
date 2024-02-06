@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {getAll} from "../services/Services.api";
+import {getAll} from "../../services/services.api";
 import Post from "./Post";
 import PostDetails from "../PostDetails/PostDetails";
 const Posts = () => {

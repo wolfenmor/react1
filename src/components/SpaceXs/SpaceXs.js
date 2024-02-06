@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import SpaceX from "./SpaceX";
+import {getSpaceXs} from "../services/Services.api";
 
-const SpaceXs = ({item}) => {
+const SpaceXs = () => {
+    const [space, setSpace] = useState([])
+
+    useEffect(() => {
+        getSpaceXs()
+            .then(value => setSpace(value))
+    }, [])
+    const filteredSpace = space.filter(value => value.launch_year !== "2020")
     return (
         <div>
-            {item.map((item) => <SpaceX value={item} key={item.flight_number}></SpaceX>)
+            {filteredSpace.map((item) => <SpaceX value={item} key={item.flight_number}></SpaceX>)
             }
         </div>
     );

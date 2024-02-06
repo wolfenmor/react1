@@ -1,6 +1,7 @@
+import {launches} from "./services.api/Services.api";
+
 const getSpaceXs = () => {
-   return  fetch('https://api.spacexdata.com/v3/launches')
-        .then(response => response.json())
+   launches
 }
 
 export {getSpaceXs}

@@ -1,4 +1,4 @@
-import {axiosInstance} from "./Urls";
+import {axiosInstance} from "./urls";
 const getSpaceXs = () => {
    return axiosInstance.get("/launches")
 }

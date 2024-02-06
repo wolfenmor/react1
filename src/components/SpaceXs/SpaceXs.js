@@ -12,7 +12,7 @@ const SpaceXs = () => {
     const filteredSpace = space.filter(value => value.launch_year !== "2020")
     return (
         <div>
-            {filteredSpace.map((item) => <SpaceX value={item} key={item.flight_number}></SpaceX>)}
+            {filteredSpace.map((item) => <SpaceX value={item} key={item.flight_number}/>)}
         </div>
     );
 };

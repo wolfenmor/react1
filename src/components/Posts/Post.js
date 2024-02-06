@@ -1,13 +1,10 @@
 import React from 'react';
-const Post = ({item: post, btn}) => {
+const Post = ({post, getCurrentPost}) => {
     return (
 
         <div id={"post"}>
-            {post.id} {post.title}
-            <button onClick={() =>{
-                btn(post)
-            }}>Click to show more info
-            </button>
+            <h2>id: {post.id}<br/> title: {post.title}</h2>
+            <button onClick={() => getCurrentPost(post)}>Click to show info</button>
             <hr/>
         </div>
     );

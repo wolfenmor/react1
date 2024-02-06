@@ -1,19 +1,22 @@
 import React, {useEffect, useState} from 'react';
 import {getAll} from "../services/Services.api";
 import Post from "./Post";
-
-const Posts = ({btn}) => {
+const Posts = () => {
     const [posts, setPosts] = useState([])
 
-    useEffect(()  =>{
-        getAll().then(value => setPosts(value.data))
+    useEffect(() => {
+        getAll().then(value => value.data).then(value => setPosts(value))
     }, [])
+    const getCurrentPost = (post) => {
+        console.log(post)
+    }
     return (
-        <div id={"posts"}>
-            {
-             posts.map(value => <Post btn={btn} item={value} key={value.id}></Post>)
-            }
+        <div>
+            {posts.map(post => <Post post={post} key={post.id} getCurrentPost={getCurrentPost}></Post>)}
+
+            <div></div>
         </div>
     );
 };
+
 export default Posts;

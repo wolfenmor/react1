@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import SpaceX from "./SpaceX";
-import {getSpaceXs} from "../services/Space.api.services";
+import {getSpaceXs} from "../../services/Space.api.services";
 
 const SpaceXs = () => {
     const [space, setSpace] = useState([])

@@ -12,7 +12,7 @@ const CommentContainer = () => {
 
     return (
         <div>
-            <CommentForm/>
+            <CommentForm setComment={setComments} key={comments.id}/>
             <hr/>
             <Comments comments={comments} />
         </div>

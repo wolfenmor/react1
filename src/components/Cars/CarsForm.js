@@ -14,7 +14,6 @@ const CarsForm = ({setTrigger, carForUpdate, carForDelete}) => {
             setValue("year", carForUpdate.year, {shouldValidate: true})
         }
     }, [carForUpdate])
-
     const save =async (car) => {
       await carsService.create(car)
         setTrigger(prev=>!prev)

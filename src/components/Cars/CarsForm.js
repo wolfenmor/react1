@@ -24,14 +24,9 @@ const CarsForm = ({setTrigger, carForUpdate, carForDelete}) => {
         setTrigger(prev=>!prev)
         reset()
     }
-    const cut = async () => {
-        await carsService.deleteById(carForDelete.id)
-        setTrigger(prev=>!prev)
-        reset()
-    }
 
     return (
-        <form onSubmit={handleSubmit(carForUpdate?update:(carForDelete?cut:save))}>
+        <form onSubmit={handleSubmit(carForUpdate?update:save)}>
             <input type="text" placeholder={"brand"} {...register("brand", {
                 pattern: {
                     value: /^[a-zA-Zа-яА-яёЁіІїЇ]{1,20}$/,

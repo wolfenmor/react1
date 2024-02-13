@@ -5,12 +5,10 @@ const albums = "/albums"
 
 const urls = {
     todos:{
-        base:todos,
-        byId:(id)=> `${todos}/${id}`
+        base:todos
     },
     albums: {
-        base:albums,
-        byId:(id) => `${albums}/${id}`
+        base:albums
     }
 }
 

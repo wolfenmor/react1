@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {apiService} from "../services/apiService";
+
 import {albumsService} from "../services/albumsService";
-import Todo from "../TodosContainer/Todo";
 import Album from "./Album";
 
 const Albums = () => {

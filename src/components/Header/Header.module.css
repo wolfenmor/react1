@@ -11,3 +11,9 @@
     color: lightcoral;
     font-size: 40px;
 }
+.Header a[class="active"]{
+    color: white;
+}
+.Header a:hover{
+    text-decoration: underline;
+}

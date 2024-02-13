@@ -6,7 +6,7 @@ const Todo = ({todo}) => {
         <div>
             <div>userId: {userId}</div>
             <div>title: {title}</div>
-            <div>completed: {completed}</div>
+            <div>completed: {completed.toString()}</div>
             <hr/>
         </div>
     );

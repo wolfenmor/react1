@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 
 const UserDetails = ({userDetails}) => {
 
-    const {id, name, username, email, address} = userDetails;
+    const {name, username, email, address} = userDetails;
     console.log(userDetails)
 
     const navigate = useNavigate()
@@ -14,7 +14,7 @@ const UserDetails = ({userDetails}) => {
             <div>email: {email}</div>
             <div>city: {address.city}</div>
             <div>street: {address.street}</div>
-            <button onClick={()=> navigate(id.toString())}>post of current user</button>
+            <button onClick={()=> navigate("posts")}>post of current user</button>
         </div>
     );
 };

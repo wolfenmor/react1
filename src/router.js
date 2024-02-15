@@ -3,7 +3,10 @@ import MainLayout from "./layouts/MainLayout";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import UsersPage from "./Pages/UsersPage";
 import UserDetailsPage from "./Pages/UserDetailsPage";
-import PostTitle from "./Pages/PostTitle";
+import PostPage from "./Pages/PostPage";
+import PostDetails from "./components/Posts/PostDetails";
+import PostDetailsPage from "./Pages/PostDetailsPage";
+import CommentsPage from "./Pages/CommentsPage";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +19,15 @@ const router = createBrowserRouter([
                     {
                         path: ":id", element: <UserDetailsPage/>, children: [
                             {
-                                path:":userId", element: <PostTitle/>
+                                path:"posts", element: <PostPage/>, children: [
+                                    {
+                                        path: ":id", element: <PostDetailsPage/>, children: [
+                                            {
+                                                path:"comments", element: <CommentsPage/>
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }

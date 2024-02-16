@@ -6,7 +6,6 @@ import {commentsService} from "../services/commentsService";
 
 const CommentsPage = () => {
     const {id} = useParams();
-    console.log(id)
     const [comments, setComments] = useState(null);
 
     useEffect(()=> {

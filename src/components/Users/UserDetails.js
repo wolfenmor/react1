@@ -4,7 +4,6 @@ import {useNavigate} from "react-router-dom";
 const UserDetails = ({userDetails}) => {
 
     const {name, username, email, address} = userDetails;
-    console.log(userDetails)
 
     const navigate = useNavigate()
     return (

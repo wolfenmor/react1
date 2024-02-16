@@ -11,12 +11,13 @@ const urls = {
     },
     posts: {
         base: posts,
-        byId: (userId) => `${users}/${userId}/${posts}`
+        byId: (userId) => `${posts}/?userId=${userId}`
     },
     comments: {
         base: comments,
         byId: (postId) => `comments/?postId=${postId}`
     }
 }
+
 
 export {baseURL, urls}

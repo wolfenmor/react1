@@ -1,7 +1,7 @@
 import React from 'react';
-import PostDetails from "../components/Posts/PostDetails";
-import PostsContainer from "../components/Posts/PostsContainer";
 import {Outlet} from "react-router-dom";
+
+import PostsContainer from "../components/Posts/PostsContainer";
 
 const PostDetailsPage = () => {
     return (

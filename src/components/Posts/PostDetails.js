@@ -1,6 +1,7 @@
 import React from 'react';
 
 const PostDetails = ({post}) => {
+
     const {userId, id, title, body} = post;
     console.log(post)
     return (

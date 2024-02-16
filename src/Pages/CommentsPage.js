@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import Comments from "../components/Comments/Comments";
 import {useParams} from "react-router-dom";
+
+import Comments from "../components/Comments/Comments";
 import {commentsService} from "../services/commentsService";
 
 const CommentsPage = () => {

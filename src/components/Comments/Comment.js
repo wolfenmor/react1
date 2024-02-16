@@ -3,7 +3,6 @@ import React from 'react';
 const Comment = ({comment}) => {
 
     const {postId, id, name, email, body} = comment;
-    console.log(comment)
     return (
         <div>
             <div>postId: {postId}</div>

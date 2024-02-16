@@ -4,7 +4,6 @@ import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import UsersPage from "./Pages/UsersPage";
 import UserDetailsPage from "./Pages/UserDetailsPage";
 import PostPage from "./Pages/PostPage";
-import PostDetails from "./components/Posts/PostDetails";
 import PostDetailsPage from "./Pages/PostDetailsPage";
 import CommentsPage from "./Pages/CommentsPage";
 

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {episodeService} from "../../services/EpisodeService";
+import {episodeService} from "../../services/episodeService";
 import Episode from "./Episode";
 import css from "./Episodes.module.css"
 const Episodes = () => {

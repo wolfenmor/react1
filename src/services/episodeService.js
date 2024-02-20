@@ -1,4 +1,4 @@
-import {apiService} from "./ApiService";
+import {apiService} from "./apiService";
 import {urls} from "../constants/urls";
 
 const episodeService = {

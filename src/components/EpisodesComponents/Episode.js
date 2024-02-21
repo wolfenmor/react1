@@ -1,5 +1,6 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
+import css from "./Episode.module.css"
 const Episode = ({episodes}) => {
     const {id, name, episode} = episodes;
     const navigate = useNavigate()
@@ -11,7 +12,7 @@ const Episode = ({episodes}) => {
         navigate(`/characters/${ids}`)
     }
     return (
-        <div>
+        <div className={css.Episode}>
             <div>id: {id}</div>
             <div>name: {name}</div>
             <div>chapter: {episode}</div>

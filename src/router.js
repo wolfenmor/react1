@@ -3,7 +3,6 @@ import MainLayout from "./Layout/MainLayout";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import CharactersPage from "./Pages/CharactersPage";
 import EpisodesPage from "./Pages/EpisodesPage";
-
 const router = createBrowserRouter([
     {
         path: "", element: <MainLayout/>, errorElement: <ErrorPage/>, children: [

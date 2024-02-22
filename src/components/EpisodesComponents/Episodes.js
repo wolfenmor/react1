@@ -10,9 +10,12 @@ const Episodes = () => {
     }, [])
     console.log(episodes)
 
+    const handleClick = (episodeName) => {
+        console.log(episodeName)
+    };
     return (
         <div className={css.Episodes}>
-            {episodes.map(episodes => <Episode key={episodes.id} episodes={episodes}/>)}
+            {episodes.map(episodes => <Episode key={episodes.id} episodes={episodes} handleClick={handleClick}/>)}
         </div>
     );
 };

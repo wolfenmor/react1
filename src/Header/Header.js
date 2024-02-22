@@ -3,7 +3,8 @@ import css from "./Header.module.css"
 const Header = () => {
     return (
         <div className={css.Header}>
-            <p>Rick and Morty</p>
+            <p><b>Rick and Morty</b></p>
+
         </div>
     );
 };

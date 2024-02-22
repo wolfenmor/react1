@@ -3,7 +3,7 @@ import Characters from "../components/CharactersComponents/Characters";
 
 const CharactersPage = () => {
     const {ids} = useParams();
-    console.log(ids)
+
     return (
         <div>
            <Characters ids={ids} />

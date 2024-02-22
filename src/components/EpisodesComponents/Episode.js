@@ -1,15 +1,14 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
 import css from "./Episode.module.css"
-const Episode = ({episodes}) => {
+const Episode = ({episodes, handleClick}) => {
     const {id, name, episode} = episodes;
     const navigate = useNavigate()
-    console.log(episodes.characters)
 
     const click = () => {
         const ids = episodes.characters.map(characters => characters.split("/").slice(-1)[0]).join(",")
-        console.log(ids);
         navigate(`/characters/${ids}`)
+        handleClick(name)
     }
     return (
         <div className={css.Episode}>

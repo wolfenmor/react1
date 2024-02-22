@@ -1,4 +1,5 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
+
 import MainLayout from "./Layout/MainLayout";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import CharactersPage from "./Pages/CharactersPage";

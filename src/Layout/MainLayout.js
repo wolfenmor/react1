@@ -1,17 +1,14 @@
-import React, {createContext} from 'react';
+import React from 'react';
 import {Outlet} from "react-router-dom";
-import Header from "../Header/Header";
-import {handleClick} from "../components/EpisodesComponents/Episodes";
 
-export const Context = createContext(null)
+import Header from "../Header/Header";
+
 const MainLayout = () => {
 
     return (
         <div>
-            <Context.Provider value={"a"}>
                 <Header/>
                 <Outlet/>
-            </Context.Provider>
         </div>
     );
 };

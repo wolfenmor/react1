@@ -1,14 +1,18 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
-import css from "./Episode.module.css"
-const Episode = ({episodes, handleClick}) => {
-    const {id, name, episode} = episodes;
-    const navigate = useNavigate()
 
+import {UseAppContext} from "../../hoc/UseAppContext";
+import css from "./Episode.module.css"
+const Episode = ({episodes}) => {
+    const [, setName] = UseAppContext()
+    const {id, name, episode} = episodes;
+
+    const navigate = useNavigate()
     const click = () => {
         const ids = episodes.characters.map(characters => characters.split("/").slice(-1)[0]).join(",")
         navigate(`/characters/${ids}`)
-        handleClick(name)
+        setName(name)
+
     }
     return (
         <div className={css.Episode}>

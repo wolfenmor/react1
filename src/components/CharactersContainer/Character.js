@@ -1,5 +1,6 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
+import css from "./Character.module.css"
 
 const Character = ({character}) => {
     const {id, name, image} = character;
@@ -7,16 +8,16 @@ const Character = ({character}) => {
     const navigate = useNavigate()
 
     const toEpisodes = () => {
-        const ids = character.map(characters => characters.split("/").slice(-1)[0]).join(",")
+        const ids = character.episode.map(characters => characters.split("/").slice(-1)[0]).join(",")
         navigate(`/episodes/${ids}`)
-        console.log(ids)
     }
 
     return (
-        <div>
+        <div className={css.Character}>
             <div>id: {id}</div>
             <div>name:: {name}</div>
             <img src={image} alt={name}/>
+            <br/>
             <button onClick={()=> toEpisodes()}>Click to see Episodes of the current Character</button>
         </div>
     );

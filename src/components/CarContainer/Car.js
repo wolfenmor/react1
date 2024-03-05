@@ -17,7 +17,7 @@ const Car = ({car}) => {
             <div>brand: {brand}</div>
             <div>year: {year}</div>
             <div>price: {price}</div>
-            <button>Update</button>
+            <button onClick={() => dispatch(carsActions.setCarForUpdate(car))}>Update</button>
             <button onClick={() => cut()}>Delete</button>
         </div>
     );

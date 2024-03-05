@@ -1,23 +1,42 @@
-import React from 'react';
-import {useDispatch} from "react-redux";
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
 import {useForm} from "react-hook-form";
 import {carsActions} from "../../store/slices/carsSlice";
+import {carsService} from "../../services/carsService";
 
-const CarForm = ({setTrigger}) => {
-    const {register, reset, handleSubmit} = useForm({
+const CarForm = () => {
+    const {register, reset, handleSubmit, setValue} = useForm({
         mode:"onBlur"
     });
 
+
+
     const dispatch = useDispatch()
 
-    const save = (car) => {
-        dispatch(carsActions.create(car));
+    const save = async (car) => {
+        await carsService.create(car)
+        dispatch(carsActions.trigger())
         reset()
-        setTrigger(prev => !prev)
     };
+
+    const update = async (car) => {
+        await carsService.updateById(carForUpdate.id, car)
+        dispatch(carsActions.trigger())
+        dispatch(carsActions.setCarForUpdate(null))
+        reset()
+    }
+
+    const {carForUpdate} = useSelector(state => state.cars)
+    useEffect(()=> {
+        if (carForUpdate){
+            setValue("brand", carForUpdate.brand, {shouldValidate: true})
+            setValue("price", carForUpdate.price, {shouldValidate: true})
+            setValue("year", carForUpdate.year, {shouldValidate: true})
+        }
+    }, [carForUpdate])
     return (
         <div>
-            <form onSubmit={handleSubmit(save)}>
+            <form onSubmit={handleSubmit(carForUpdate?update: save)}>
                 <input type="text" placeholder={"brand"} {...register("brand", {
                     pattern: {
                         value: /^[a-zA-Zа-яА-яёЁіІїЇ]{1,20}$/,
@@ -34,7 +53,7 @@ const CarForm = ({setTrigger}) => {
                     min: 1990,
                     max: new Date().getFullYear()
                 })}/>
-                <button>Save</button>
+                <button>{carForUpdate?"update": "save"}</button>
             </form>
         </div>
     );

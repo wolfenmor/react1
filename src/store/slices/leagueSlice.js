@@ -9,7 +9,8 @@
         async (_,thunkAPI) => {
             try {
                 const {data} = await leagueService.getAll()
-                return data.response
+                return data
+
             }catch (e) {
                 return thunkAPI.rejectWithValue(e.response.value)
             }
